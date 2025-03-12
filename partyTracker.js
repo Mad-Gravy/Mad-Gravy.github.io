@@ -69,14 +69,16 @@ function displayCharacters()
         const charBox = document.createElement('div');
         charBox.className = 'character-box';
         charBox.innerHTML = `
+        <fieldset id="character-field">
+        <legend>${character.name}</legend>
         <div class="character-top">
           <div class="character-info">
-            <strong>Name:</strong> ${character.name}<br />
             <strong>Race:</strong> ${character.race}<br />
             <strong>Class:</strong> ${character.class} (${character.subClass})<br />
             <strong>Alignment:</strong> ${character.alignment}<br>
             <strong>Special Ability:</strong> ${character.specialAbility}<br />
             <strong>Familiar:</strong> ${character.familiar}<br />
+            <br />
             <strong>Bio:</strong> ${character.bio}<br />
           </div>
 
@@ -138,7 +140,7 @@ function displayCharacters()
             <h3>Equipment</h3>
               <div class="equipment">
                 <div class="equipment">
-                <br />
+                <br />                
                   <div class="equipment-item">
                       <strong>Head:</strong> <input type="text" class="equip-input" data-index="${index}" data-slot="head" value="${character.equipment.head || ''}">
                   </div>
@@ -192,7 +194,8 @@ function displayCharacters()
             </ul>
           </div>
         </div>
-        <button class="delete-character" data-index="${index}">Delete Character (!!!WARNING!!! Once Deleted, All Data Will Be Lost And CANNOT Be Retrieved!)</button>
+        <button class="delete-character" data-index="${index}">--Delete Character (!!!WARNING!!! Once Deleted, All Data Will Be Lost And CANNOT Be Retrieved!)--</button>
+        </fieldset>
         `;
 
         displaySection.appendChild(charBox);
@@ -239,7 +242,9 @@ function displayCharacters()
                 }
             });
         });
+
 //---------------------------------------------------------------------------------------//
+
     charBox.querySelector('.addFeat').addEventListener('click', () => {
       const input = document.getElementById(`featInput-${index}`);
       if (input.value.trim() !== "") {
@@ -296,5 +301,4 @@ function displayCharacters()
 }
 //---------------------------------------------------------------------------------------//
 
-//---------------------------------------------------------------------------------------//
 window.addEventListener('load', displayCharacters);

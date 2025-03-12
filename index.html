@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<head>
+    <!-- Joseph Teague's Term Project -->
+    <!-- 133JS with Ron Little -->
+    <!-- Dungeons and Dragons Character Tracker for a full group of players -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Party Tracker</title>
+    <link href="partyTracker.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&family=Vollkorn&display=swap" rel="stylesheet">
+</head>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<body>	
+	<div id="wrapper">
+		<img src="pictures/party-tracker-banner.jpg" alt="Drink and drink and FIGHT!" title="Get this party STARTED!" />
+		<br />
+    <article>
+        <form id="characterForm">
+			<fieldset id="characterData">
+				<legend>Character Creation</legend>
+					<div class="character-form-container">
+						<div class="character-form-left">						
+							<label for="name"><strong>Name:</strong></label><br />
+							<input type="text" id="name" name="name" value="Character Name"><br />
+							
+							<label for="race"><strong>Race: </strong></label><br />
+							<input type="text" id="race" name="race" value="Race"><br />
+							
+							<label for="class"><strong>Class: </strong></label><br />
+							<input type="text" id="class" name="class" value="Class"><br />
+
+							<label for="subClass"><strong>Sub Class: </strong></label><br />
+							<input type="text" id="subClass" name="subClass" value="Sub Class"><br />
+
+							<label for="alignment"><strong>Alignment: </strong></label><br />
+							<input type="text" id="alignment" name="alignment" value="Alignment"><br />
+							
+							<label for="sAbility"><strong>Special Ability: </strong></label><br />
+							<input type="text" id="sAbility" name="sAbility" value="Special Ability"><br />
+						<br />			
+<!-- -------------------------------------------------------------------------------------------- -->
+						<label for="famSel"><strong>Familiar:</strong></label><br />
+							<select name="famSel" id="famSel">
+								<option value="None">None</option>
+								<option value="Weasel">Weasel</option>
+								<option value="Cat">Cat</option>
+								<option value="Hawk">Hawk</option>
+								<option value="Raven">Raven</option>
+								<option value="Rat">Rat</option>
+								<option value="Jackal">Jackal</option>
+								<option value="Parrot">Parrot</option>
+								<option value="Monkey">Monkey</option>
+								<option value="Octopus">Octopus</option>
+								<option value="Bat">Bat</option>
+								<option value="Crab">Crab</option>
+								<option value="Frog">Frog</option>
+								<option value="Lizard">Lizard</option>
+								<option value="Owl">Owl</option>
+								<option value="Snake">Snake</option>
+							</select>
+							<br />
+							<br />
+						</div>
+<!-- -------------------------------------------------------------------------------------------- -->
+						<div class="character-form-right">
+							<label for="bio"><strong>Bio/Background: </strong></label><br />
+							<textarea id= "bio" name="bio" rows="10" cols="60"></textarea><br />
+						</div>
+					</div>
+                <input type="submit" value="Do it now!" >            
+                <input type="reset" value="Never mind!" >
+			</fieldset>		
+		</form>
+    </article>
+    <br />
+
+<!-- -------------------------------------------------------------------------------------------- -->
+
+    <section id="charactersDisplay">
+        </section>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<footer>
+	<br />
+	&copy; 2025 Old Gaffer's Advice and Hobbit Code Keepers <a href="mailto:oldgaffergamgee@gmail.com">Whisper By Moth!</a>
+	<address>111 Bagshot Row, Hobbiton, SH</address>
+</footer>
+</div> 
+</body>
+<script src="partyTracker.js"></script>
+</html>

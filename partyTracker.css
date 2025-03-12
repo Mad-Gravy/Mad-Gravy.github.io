@@ -62,6 +62,7 @@ legend
 
 .character-form-container 
 {
+    font-family: 'Cinzel', serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -92,6 +93,7 @@ legend
 
 #charactersDisplay 
 {
+    font-family: 'Cinzel', serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,7 +127,7 @@ legend
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #fff0cc;
+    background-color: #a65b49;
     gap: 10px;
 }
 
@@ -141,6 +143,7 @@ legend
 
 .character-info 
 {
+    font-family: 'Cinzel', sans-serif;
     flex: 1; 
     min-width: 30%;
     max-width: 50%;
